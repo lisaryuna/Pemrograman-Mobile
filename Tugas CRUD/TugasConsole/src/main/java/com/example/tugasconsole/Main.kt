@@ -111,7 +111,7 @@ fun main() {
             4 -> {
                 print("Masukkan nomor urut yang akan dihapus: ")
                 val inputStr = readLine()
-                val index = -1
+                var index = -1
                 if (inputStr != null) {
                     val intIndex = inputStr.toIntOrNull()
                     if (intIndex != null) {
