@@ -33,19 +33,39 @@ fun main() {
         println("0. Keluar")
         print("Pilihan: ")
 
-        val option: Int = readLine()?.toIntOrNull() ?: -1
+        val inputOption = readLine()
+        var option = -1
+        if (inputOption != null) {
+            val intOption = inputOption.toIntOrNull()
+            if (intOption != null) {
+                option = intOption
+            }
+        }
 
         when (option) {
             1 -> {
                 print("Masukkan NIM: ")
-                val nim = readLine() ?: ""
+                val inputNim = readLine()
+                var nim = ""
+                if (inputNim != null) {
+                    nim = inputNim
+                }
+
                 print("Masukkan Nama: ")
-                val name = readLine() ?: ""
+                val inputName = readLine()
+                var name = ""
+                if (inputName != null) {
+                    name = inputName
+                }
                 val newStudent = Student(nim, name)
 
                 print("Masukkan Prodi (boleh dikosongkan): ")
                 val majorInput = readLine()
-                newStudent.major = if (majorInput.isNullOrBlank()) null else majorInput
+                if (majorInput != null && majorInput.isNotBlank()) {
+                    newStudent.major = majorInput
+                } else {
+                    newStudent.major = null
+                }
 
                 studentList.add(newStudent)
                 println("Mahasiswa berhasil ditambahkan!")
@@ -56,18 +76,32 @@ fun main() {
                     println("Belum ada data.")
                 } else {
                     studentList.forEachIndexed { index, student ->
-                        val infoMajor = student.major ?: "Belum Diatur"
+                        var infoMajor = "Belum Diatur"
+                        if (student.major != null) {
+                            infoMajor = student.major.toString()
+                        }
                         println("${index + 1}. NIM: ${student.nim}, Nama: ${student.name}, Prodi: $infoMajor")
                     }
                 }
             }
             3 -> {
                 print("Masukkan nomor urut yang akan diubah: ")
-                val index = (readLine()?.toIntOrNull() ?: 0) - 1
+                val inputStr = readLine()
+                var index = -1
+                if (inputStr != null) {
+                    val intIndex = inputStr.toIntOrNull()
+                    if (intIndex != null) {
+                        index = intIndex - 1
+                    }
+                }
 
                 if (index in 0 until studentList.size) {
                     print("Masukkan nama baru: ")
-                    val newName = readLine() ?: ""
+                    val inputNewName = readLine()
+                    var newName = ""
+                    if (inputNewName != null) {
+                        newName = inputNewName
+                    }
                     studentList[index].name = newName
                     println("Nama mahasiswa berhasil diubah!")
                 } else {
@@ -76,7 +110,14 @@ fun main() {
             }
             4 -> {
                 print("Masukkan nomor urut yang akan dihapus: ")
-                val index = (readLine()?.toIntOrNull() ?: 0) - 1
+                val inputStr = readLine()
+                val index = -1
+                if (inputStr != null) {
+                    val intIndex = inputStr.toIntOrNull()
+                    if (intIndex != null) {
+                        index = intIndex - 1
+                    }
+                }
 
                 if (index in 0 until studentList.size) {
                     studentList.removeAt(index)
@@ -87,9 +128,13 @@ fun main() {
             }
             5 -> {
                 println("RINGKASAN DATA")
-                for (student in studentList) {
-                    val record = DataRecord(student.nim, student.name)
-                    println("Record: $record")
+                if (studentList.isEmpty()) {
+                    println("Belum ada data.")
+                } else {
+                    for (student in studentList) {
+                        val record = DataRecord(student.nim, student.name)
+                        println("Record: $record")
+                    }
                 }
             }
             0 -> {
@@ -99,7 +144,6 @@ fun main() {
             else -> {
                 println("Pilihan tidak valid. Silakan coba lagi.")
             }
-
         }
     }
 }
