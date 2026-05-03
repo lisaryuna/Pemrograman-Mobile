@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#FFFFFF"
+    android:layout_margin="16dp"
+    android:elevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="#123456"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/tvSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sub-Title"
+                android:textSize="14sp"
+                android:textColor="#000000" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@android:drawable/star_on" />
+
+                <TextView
+                    android:id="@+id/tvRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9.23"
+                    android:textSize="14sp"
+                    android:layout_marginStart="4dp"
+                    android:textColor="#000000"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:justificationMode="inter_character"
+        android:text="Tes 1234567890. 2410817220012. pacar bina . bladhfafhasfhaifhiaweiweaifkjanfkjasnfkasifheurfhdyainyunah Lorem Ipsum Lorem Ipsum. Tes 1234567890. 2410817220012. bladhfafhasfhaifhiaweiweaifkjanfkjasnfkasifheurfhdyainyunah Lorem Ipsum Lorem Ipsum. Tes 1234567890. 2410817220012. bladhfafhasfhaifhiaweiweaifkjanfkjasnfkasifheurfhdyainyunah Lorem Ipsum Lorem Ipsum. Tes 1234567890. 2410817220012. bladhfafhasfhaifhiaweiweaifkjanfkjasnfkasifheurfhdyainyunah Lorem Ipsum Lorem Ipsum. Tes 1234567890. 2410817220012. bladhfafhasfhaifhiaweiweaifkjanfkjasnfkasifheurfhdyainyunah Lorem Ipsum Lorem Ipsum. Tes 1234567890. 2410817220012. bladhfafhasfhaifhiaweiweaifkjanfkjasnfkasifheurfhdyainyunah Lorem Ipsum Lorem Ipsum. Tes 1234567890. 2410817220012. bladhfafhasfhaifhiaweiweaifkjanfkjasnfkasifheurfhdyainyunah Lorem Ipsum Lorem Ipsum" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnLike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Like"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#4A78D0"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/btnDislike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dislike"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#E55353"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/btnShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Share"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#50B86C" />
+
+    </LinearLayout>
+
+</LinearLayout>
