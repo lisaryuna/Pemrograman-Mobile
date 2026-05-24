@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">recyclerview</string>
+    <string name="gambar_item">Gambar Item</string>
+    <string name="item">Item</string>
+    <string name="deskripsi">Deskripsi</string>
+
+    <string name="title_item_1">Item Pertama</string>
+    <string name="desc_item_1">Deskripsi item kesatu</string>
+
+    <string name="title_item_2">Item Kedua</string>
+    <string name="desc_item_2">Deskripsi item kedua</string>
+
+    <string name="title_item_3">Item Ketiga</string>
+    <string name="desc_item_3">Deskripsi item ketiga</string>
+
+    <string name="title_item_4">Item Keempat</string>
+    <string name="desc_item_4">Deskripsi item keempat</string>
+
+    <string name="title_item_5">Item Kelima</string>
+    <string name="desc_item_5">Deskripsi item kelima</string>
+    <string name="gambar">Gambar</string>
 </resources>
